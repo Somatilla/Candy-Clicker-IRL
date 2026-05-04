@@ -46,11 +46,13 @@ while True:
     if buttonpress % 10 == 0:
         print(clickingPower)
         clickingPower += 0.01
+        clickingPower = round(clickingPower, 2)
         buttonpress += 1
         lcd.move_to(0,1)
         lcd.putstr("CP:" + str(clickingPower))
     elif buttonpress2 % 100 == 0:
         candyPerSecond += 0.01
+        candyPerSecond = round(candyPerSecond, 2)
         print("CPS:" + str(candyPerSecond))
         buttonpress2 += 1
         lcd.move_to(8,1)
